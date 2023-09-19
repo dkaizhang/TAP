@@ -1,0 +1,42 @@
+# general settings 
+experiment: explanations
+out_dir: runs
+gpu: 0
+model_name: resnet18_activations
+load_from: null
+pretrained: true
+data: pneu_text_RGB
+split: train
+frac: null # fraction of data to be used
+seed: 0
+val_on: val
+val_split: 0.1
+teacher_load_froms: ['<path to teacher model checkpoint file>'] # first teacher is used for kd
+teacher_model_names: ['resnet18_activations']
+
+# explainer
+method: pneu_text_decoys_RGB # change to input_gradients for teacher annotations
+
+# reasons penalisation parameters
+manual_mask_region: null # this overrides which mask region is being used in get_mask
+mask_threshold_wr: 0.01 # based on percentile - WR loss will cover everything larger than this
+
+# kd training parameters
+kd_lambda: 0.0
+temperature: 1.0
+
+# transfer parameters
+et_lambda: 0.0
+at_lambda: 0.0
+
+# training parameters
+lr: 1.0e-5
+task_loss: cross_entropy
+penal_loss: rrr # purely switches between rrr and rbr
+penal_lambda: 0.0
+tap_lambda: 1.0e-3
+l2: 0
+batch_size: 16
+num_workers: 4
+epochs: 50
+save_every: 50
