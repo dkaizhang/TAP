@@ -1,7 +1,7 @@
 # Training with Targeted Activation Penalties (TAPs)
 Dekai Zhang, Matthew Williams, Francesca Toni
 
-This repository contains the code for our paper [Targeted Activation Penalties Help CNNs Ignore Spurious Signals](https://arxiv.org/abs/2311.12813). 
+This repository contains the code for our AAAI-24 paper: [Targeted Activation Penalties Help CNNs Ignore Spurious Signals](https://ojs.aaai.org/index.php/AAAI/article/view/29610). 
 
 ## Main idea
 
@@ -103,10 +103,15 @@ python explanation_overlap_acts.py \
 ## Cite us
 
 ```
-@article{zhang2023targeted,
-      title={Targeted Activation Penalties Help CNNs Ignore Spurious Signals}, 
-      author={Dekai Zhang and Matthew Williams and Francesca Toni},
-      journal={arXiv preprint arXiv:2311.12813},
-      year={2023}
+@article{Zhang_Williams_Toni_2024,
+	author = {Zhang, Dekai and Williams, Matt and Toni, Francesca},
+	doi = {10.1609/aaai.v38i15.29610},
+	journal = {Proceedings of the AAAI Conference on Artificial Intelligence},
+	month = {Mar.},
+	number = {15},
+	pages = {16705-16713},
+	title = {Targeted Activation Penalties Help CNNs Ignore Spurious Signals},
+	volume = {38},
+	year = {2024}
 }
 ```
